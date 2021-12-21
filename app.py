@@ -70,7 +70,7 @@ def get_cupcake(cupcake_id):
     return jsonify(cupcake=cupcake.to_dict())
 
 
-@app.route("/api/cupcakes/<int:cupcake_id>")
+@app.route("/api/cupcakes/<int:cupcake_id>", methods=["PATCH"])
 def update_cupcake(cupcake_id):
     """Update a cupcake with the id"""
     
@@ -89,7 +89,7 @@ def update_cupcake(cupcake_id):
     return jsonify(cupcake=cupcake.to_dict())
 
 
-@app.route("/api/cupcakes/<int:cupcake_id>")
+@app.route("/api/cupcakes/<int:cupcake_id>", methods=["DELETE"])
 def delete_cupcake(cupcake_id):
     """Delete specific cupcake."""
 
